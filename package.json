@@ -1,0 +1,40 @@
+{
+  "name": "@basilbook/canadia",
+  "version": "0.1.0",
+  "description": "Canadia Bank's KHQR payment gateway for Node: make a KHQR (as a string or an image), check a payment, refund, sign-in kept for you. No framework.",
+  "license": "MIT",
+  "author": "BasilBook",
+  "keywords": ["canadia", "canadia-bank", "khqr", "cambodia", "payments", "refund"],
+  "sideEffects": false,
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/cjs/index.d.ts",
+  "exports": {
+    ".": {
+      "import": { "types": "./dist/esm/index.d.ts", "default": "./dist/esm/index.js" },
+      "require": { "types": "./dist/cjs/index.d.ts", "default": "./dist/cjs/index.js" }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": ["dist", "README.md", "CHANGELOG.md", "LICENSE"],
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "node ../build-dual.mjs",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "prepublishOnly": "node ../build-dual.mjs"
+  },
+  "dependencies": {
+    "@basilbook/khqr": "workspace:^"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.3",
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.5"
+  }
+}
