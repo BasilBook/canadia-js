@@ -4,6 +4,9 @@
   "description": "Canadia Bank's KHQR payment gateway for Node: make a KHQR (as a string or an image), check a payment, refund, sign-in kept for you. No framework.",
   "license": "MIT",
   "author": "BasilBook",
+  "repository": { "type": "git", "url": "git+https://github.com/basilbook/canadia-js.git" },
+  "bugs": { "url": "https://github.com/basilbook/canadia-js/issues" },
+  "homepage": "https://github.com/basilbook/canadia-js",
   "keywords": ["canadia", "canadia-bank", "khqr", "cambodia", "payments", "refund"],
   "sideEffects": false,
   "main": "./dist/cjs/index.js",
@@ -24,10 +27,10 @@
     "access": "public"
   },
   "scripts": {
-    "build": "node ../build-dual.mjs",
+    "build": "node build-dual.mjs",
     "typecheck": "tsc -p tsconfig.json",
     "test": "vitest run",
-    "prepublishOnly": "node ../build-dual.mjs"
+    "prepublishOnly": "node build-dual.mjs"
   },
   "dependencies": {
     "@basilbook/khqr": "workspace:^"
