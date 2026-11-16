@@ -33,7 +33,7 @@
     "prepublishOnly": "node build-dual.mjs"
   },
   "dependencies": {
-    "@basilbook/khqr": "workspace:^"
+    "@basilbook/khqr": "^0.1.0"
   },
   "devDependencies": {
     "@types/node": "^25.9.3",
